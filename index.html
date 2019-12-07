@@ -26,6 +26,8 @@
   </script>
   <!-- custom styles and javascript-->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+  <link rel="stylesheet" href="css/positioning.css">
   <script src="js/index.js"></script>
 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
@@ -34,33 +36,60 @@
 
 <body>
 
-
-  <div>
-    <h1>Rock</h1>
-    <h1>Paper</h1>
-    <h1>Scissor</h1>
-    <h3>Score</h3>
-    <h2 id="score-number">[ScoreNumber]</h2>
-
+  <section id="stats">
     <div class="row">
-      <div class="col-lg-4">
-          <button onclick="rockClicked()" class="btn btn-primary">Rock</button>
+      <div class="col-lg-3">
+        <!-- EMPTY DIV FOR SPACE-->
       </div>
-      <div class="col-lg-4">
-        <button onclick="paperClicked()" class="btn btn-danger">Paper</button>
+      <div class="col-lg-6 stat-dashboard">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="small-line-height">ROCK</h1>
+            <h1 class="small-line-height">PAPER</h1>
+            <h1 class="small-line-height">SCISSORS</h1>
+          </div>
+          <div class="col-lg-6 scoreboard-base">
+            <div class="scoreboard">
+                <div class="score-title score-text">
+                    <p>SCORE</p>
+                </div>
+                <div class="score-value bold dark-text">
+                    <p id="score-number">13</p>
+                </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-4">
-        <button onclick="scissorClicked()" class="btn btn-warning">Scissor</button>
+      <div class="col-lg-3">
+        <!-- EMPTY DIV FOR SPACE-->
       </div>
     </div>
+  </section>
 
-  </div>
-  <div>
+  <!-- START OF GAME SECTION -->
+  <section id="the-game">
+    <div>
+      <div class="row">
+        <div class="col-lg-4">
+          <button onclick="rockClicked()" class="btn btn-primary">Rock</button>
+        </div>
+        <div class="col-lg-4">
+          <button onclick="paperClicked()" class="btn btn-danger">Paper</button>
+        </div>
+        <div class="col-lg-4">
+          <button onclick="scissorClicked()" class="btn btn-warning">Scissor</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF GAME SECTION -->
 
-  </div>
-  <div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ruleModal">Rules</button>
-  </div>
+  <section>
+    <div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ruleModal">Rules</button>
+    </div>
+  </section>
+
 
   <!-- Rules Modal-->
   <div class="modal fade" id="ruleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -68,14 +97,18 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body">
-          <div>
-              RULES
+          <div class="row">
+            <div class="col-6">
+              <h1 class="dark-text bold">RULES</h1>
+            </div>
+            <div class="col-6">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
-                </button>
+                <span aria-hidden="true"><img src="images/icon-close.svg" alt=""></span>
+            </div>
+            </button>
           </div>
-          <div>
-              <img src="images/image-rules.svg" alt="">
+          <div class="align-center">
+            <img class="rule-img" src="images/image-rules.svg" alt="rule-image">
           </div>
         </div>
       </div>
@@ -86,7 +119,8 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/yudachris">Yehuda Nathanael</a> and <a href="https://github.com/calvinpa">Calvin Paulus</a>.
+    Coded by <a href="https://github.com/yudachris">Yehuda Nathanael</a> and <a
+      href="https://github.com/calvinpa">Calvin Paulus</a>.
   </div>
 </body>
 

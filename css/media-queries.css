@@ -1,0 +1,24 @@
+@media (max-width:576px) {
+
+    .modal-dialog {
+      margin: auto;
+    }
+  
+  }
+  
+  @media (max-width:420px) {
+  
+    .modal-dialog {
+      max-width: 330px;
+    }
+  
+    .modal-body {
+      padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+  
+    .rule-img {
+      width: 80%;
+      padding-bottom: 10px;
+    }
+  
+  }
