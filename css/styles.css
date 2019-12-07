@@ -1,8 +1,18 @@
-.attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+/*background color*/
+body{
+    background: radial-gradient(circle at top,hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    min-height: 100vh;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+/*
+font setting with bold
+*/
+
+.mfont{
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 600;
+}
+
+.mfont.bold{
+    font-weight: 700;
+}
