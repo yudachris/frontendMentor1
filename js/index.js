@@ -1,12 +1,16 @@
 
 //getting input from the player based on what button the player clicked.
 //at the same time, getting the computer choice and start the match.
+var score = 0;
+
+document.querySelector("#score-number").innerText = score;
+
 function rockClicked(){
     var userChoice = "rock";
     var compChoice = computerChoice();
     var result = startMatch(userChoice, compChoice);
 
-    console.log("computer has chosen "+compChoice+" and the result is: "+ result);
+    showResult(compChoice, result);
 }
 
 function paperClicked(){
@@ -14,16 +18,16 @@ function paperClicked(){
     var compChoice = computerChoice();
     var result = startMatch(userChoice, compChoice);
 
-    console.log("computer has chosen "+compChoice+" and the result is: "+ result);
+    showResult(compChoice, result);
     
 }
 
-function scissorClicked(){
-    var userChoice = "scissor";
+function scissorsClicked(){
+    var userChoice = "scissors";
     var compChoice = computerChoice();
     var result = startMatch(userChoice, compChoice);
 
-    console.log("computer has chosen "+compChoice+" and the result is: "+ result);
+    showResult(compChoice, result);
 }
 
 function computerChoice(){
@@ -37,7 +41,7 @@ function computerChoice(){
         var compChoice = "paper";
     }
     else if(randomNumber == 3){
-        var compChoice = "scissor";
+        var compChoice = "scissors";
     }
     return compChoice;
 }
@@ -55,8 +59,8 @@ function startMatch(userChoice, compChoice){
     if(x === y){
         result = "draw";
     }
-    //player = paper, com = scissor, com wins
-    else if(x === "paper" && y === "scissor"){
+    //player = paper, com = scissors, com wins
+    else if(x === "paper" && y === "scissors"){
         
         result = "com wins";
 
@@ -67,8 +71,8 @@ function startMatch(userChoice, compChoice){
         result = "user wins";
 
     }
-    //player = rock, com = scissor, player wins
-    else if(x === "rock" && y === "scissor"){
+    //player = rock, com = scissors, player wins
+    else if(x === "rock" && y === "scissors"){
         
         result = "user wins";
 
@@ -79,14 +83,14 @@ function startMatch(userChoice, compChoice){
         result = "com wins";
 
     }
-    //player = scissor, com = rock, com wins
-    else if(x === "scissor" && y === "rock"){
+    //player = scissors, com = rock, com wins
+    else if(x === "scissors" && y === "rock"){
         
         result = "com wins";
 
     }
-    //player = scissor, com = paper, player wins
-    else if(x === "scissor" && y === "paper"){
+    //player = scissors, com = paper, player wins
+    else if(x === "scissors" && y === "paper"){
         
         result = "user wins";
 
@@ -94,4 +98,8 @@ function startMatch(userChoice, compChoice){
 
     return result;
 
+}
+
+function showResult(compChoice, result){
+    alert("computer has chosen "+compChoice+" and the result is: "+ result);
 }
