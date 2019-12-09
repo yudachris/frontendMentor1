@@ -24,11 +24,10 @@
   </script>
 
   </script>
-  <!-- custom styles and javascript-->
+  <!-- custom styles (javascript at the bottom)-->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/media-queries.css">
   <link rel="stylesheet" href="css/positioning.css">
-  <script src="js/index.js"></script>
 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
@@ -50,12 +49,12 @@
           </div>
           <div class="col-lg-6 scoreboard-base">
             <div class="scoreboard">
-                <div class="score-title score-text">
-                    <p>SCORE</p>
-                </div>
-                <div class="score-value bold dark-text">
-                    <p id="score-number">13</p>
-                </div>
+              <div class="score-title score-text">
+                <p>SCORE</p>
+              </div>
+              <div class="score-value bold dark-text">
+                <p id="score-number">13</p>
+              </div>
             </div>
           </div>
         </div>
@@ -68,16 +67,25 @@
 
   <!-- START OF GAME SECTION -->
   <section id="the-game">
-    <div>
-      <div class="row">
-        <div class="col-lg-4">
-          <button onclick="rockClicked()" class="btn btn-primary">Rock</button>
+    <div class="game-window">
+      <!-- triangle background -->
+      <div class="triangle-bg">
+        <img src="images/bg-triangle.svg" alt="">
+      </div>
+      <!-- three buttons -->
+      <div onclick="paperClicked()" class="rps-circle paper-color">
+        <div class="inner-circle">
+          <img src="images/icon-paper.svg" alt="choose-paper">
         </div>
-        <div class="col-lg-4">
-          <button onclick="paperClicked()" class="btn btn-danger">Paper</button>
+      </div>
+      <div onclick="rockClicked()" class="rps-circle rock-color">
+        <div class="inner-circle">
+          <img src="images/icon-rock.svg" alt="choose-paper">
         </div>
-        <div class="col-lg-4">
-          <button onclick="scissorClicked()" class="btn btn-warning">Scissor</button>
+      </div>
+      <div onclick="scissorsClicked()" class="rps-circle scissors-color">
+        <div class="inner-circle">
+          <img src="images/icon-scissors.svg" alt="choose-paper">
         </div>
       </div>
     </div>
@@ -122,6 +130,8 @@
     Coded by <a href="https://github.com/yudachris">Yehuda Nathanael</a> and <a
       href="https://github.com/calvinpa">Calvin Paulus</a>.
   </div>
+  <!-- custom JS-->
+  <script src="js/index.js"></script>
 </body>
 
 </html>

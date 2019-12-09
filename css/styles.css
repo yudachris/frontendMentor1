@@ -68,6 +68,55 @@ h1 {
   margin-top:-10px;
 }
 
+/* Initial Game window styles */
+.game-window {
+  background-color: gray;
+}
+
+.triangle-bg{
+  position:absolute;
+  background-color:yellow;
+  top:50%;
+  left:auto;
+}
+
+.rps-circle {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.paper-color {
+  background: linear-gradient(135deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.rock-color {
+  background: linear-gradient(135deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.scissors-color {
+  background: linear-gradient(135deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.inner-circle {
+  height: 75%;
+  width: 75%;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 12.5%;
+  left: 12.5%;
+}
+
+.inner-circle img {
+  position: absolute;
+  top: 25%;
+  left: 27%;
+  height: 50%;
+}
+
 
 /*Modal custom classes*/
 .modal h1 {
