@@ -104,6 +104,7 @@ h1 {
   height: 75%;
   width: 75%;
   background-color: white;
+  box-shadow: inset 0px 8px 2px 0.5px rgb(188, 188, 208);
   border-radius: 50%;
   position: absolute;
   top: 12.5%;
