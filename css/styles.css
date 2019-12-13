@@ -20,6 +20,9 @@ h1 {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
 /* FONT RELATED SETTINGS*/
 
 .bold {
@@ -90,20 +93,24 @@ h1 {
 
 .paper-color {
   background: linear-gradient(135deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: inset 0px -6px 1px 2.5px hsla(230, 55%, 43%);
 }
 
 .rock-color {
   background: linear-gradient(135deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: inset 0px -6px 1px 2.5px hsla(346, 68%, 34%);
 }
 
 .scissors-color {
   background: linear-gradient(135deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: inset 0px -6px 1px 2.5px hsla(29, 57%, 44%);
 }
 
 .inner-circle {
   height: 75%;
   width: 75%;
   background-color: white;
+  box-shadow: inset 0px 8px 2px 0.5px rgb(188, 188, 208);
   border-radius: 50%;
   position: absolute;
   top: 12.5%;
@@ -117,7 +124,12 @@ h1 {
   height: 50%;
 }
 
-
+.rule-btn{
+  border: solid 3px hsl(217, 16%, 45%);
+  border-radius: 15px;
+  width: 100px;
+  color: white;
+}
 /*Modal custom classes*/
 .modal h1 {
   font-size: 1.7rem;
