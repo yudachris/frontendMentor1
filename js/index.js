@@ -5,29 +5,22 @@ var score = 0;
 
 document.querySelector("#score-number").innerText = score;
 
-function rockClicked(){
-    var userChoice = "rock";
-    var compChoice = computerChoice();
-    var result = startMatch(userChoice, compChoice);
+//getting how many buttons with specific class in the HTML
+var numberOfButtons = document.querySelectorAll(".choice-button").length;
 
-    showResult(compChoice, result);
-}
+//cycling all the elements of class choice button and giving it event listener to each.
+for(var i = 0; i < numberOfButtons; i++){
 
-function paperClicked(){
-    var userChoice = "paper";
-    var compChoice = computerChoice();
-    var result = startMatch(userChoice, compChoice);
+    document.querySelectorAll(".choice-button")[i].addEventListener("click", function(){
+       
+        var playerChoice = this.id;
+        var compChoice = computerChoice();
+        var result = startMatch(playerChoice, compChoice);
 
-    showResult(compChoice, result);
-    
-}
+        showResult(compChoice, result);
 
-function scissorsClicked(){
-    var userChoice = "scissors";
-    var compChoice = computerChoice();
-    var result = startMatch(userChoice, compChoice);
+    });
 
-    showResult(compChoice, result);
 }
 
 function computerChoice(){
@@ -47,9 +40,9 @@ function computerChoice(){
 }
 
 //by using choice from the player and also random generated computer choice, the match will start and decide the winner
-function startMatch(userChoice, compChoice){
+function startMatch(playerChoice, compChoice){
 
-    var x = userChoice;
+    var x = playerChoice;
 
     var y = compChoice;
 

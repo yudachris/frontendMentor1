@@ -1,0 +1,17 @@
+
+/*!! DO NOT CHANGE !!*/
+
+#paper{
+    top:13%;
+    right:calc(100vw - 47%);
+  }
+  #scissors{
+    top:13%;
+    left:calc(100vw - 47%);
+  }
+  #rock{
+    bottom:16%;
+    left:calc(50% - 90px);
+  }
+  
+  /*!! DO NOT CHANGE !!*/
