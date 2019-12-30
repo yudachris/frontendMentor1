@@ -16,8 +16,8 @@ for (var i = 0; i < numberOfButtons; i++) {
         var compChoice = computerChoice();
         var result = startMatch(playerChoice, compChoice);
 
-        $("#game-window-init").fadeOut("fast",function(){
-            $("#game-window-chosen").fadeIn(2000, function(){
+        $("#game-window-init").fadeOut(500,function(){
+            $("#game-window-chosen").fadeIn(500, function(){
                 showResult(playerChoice, compChoice, result);
             });
         });
@@ -99,6 +99,7 @@ function showResult(playerChoice, compChoice, result) {
 
     var pC = playerChoice;
     var cC = compChoice;
+    var resTxt;
 
     document.querySelector("#player-choice").innerHTML = "<div class='rps-circle-chosen " + pC + "-color choice-button'>" +
         "<div class='inner-circle'>" +
@@ -116,19 +117,49 @@ function showResult(playerChoice, compChoice, result) {
 
         if(result == "user wins"){
             score += 1;
-            document.querySelector("#score-number").innerText = score;
+            
+            resTxt = "YOU WIN";
         }
-        else{
-            if(score < 0){
+        else if(result == "com wins"){
+            if(score == 0){
                 score = 0;
+                resTxt = "YOU LOSE";
             }
             else{
                 score -= 1;
+                resTxt = "YOU LOSE";
             }
-            document.querySelector("#score-number").innerText = score;
         }
-
+        else{
+            resTxt = "DRAW";
+        }
+        $("#players").addClass("relative-position");
+        $("#coms").addClass("relative-position");
+        $("#players").animate({right:'45%'},1000);
+        $("#coms").animate({left:'45%'},1000, function(){
+            $("#result-txt").text(resTxt);
+            $("#end-result").fadeIn();
+            document.querySelector("#score-number").innerText = score;
+        });
+        
     },500);
 
 
+}
+
+function resetGame(){
+
+    setTimeout(function(){
+        $("#player-choice").html("");
+        $("#com-choice").html("");
+    },250);
+
+
+    $("#game-window-chosen").fadeOut("fast", function(){
+        $("#end-result").fadeOut(500,function(){
+            $("#game-window-init").fadeIn("fast");
+        });
+            
+        });
+        
 }

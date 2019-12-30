@@ -92,17 +92,17 @@
         <div class="col-lg-6 col-md-6 content">
           <div class="row">
             <div class="col-lg-6 col-md-6 padding-0">
-              <div class="choice">
+              <div id="players" class="choice">
                 <div class="choice-header">
                   YOU PICKED
                 </div>
                 <div id="player-choice" class="choice-body">
-                  
+
                 </div>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 padding-0">
-              <div class="choice">
+              <div id="coms" class="choice">
                 <div class="choice-header">
                   THE HOUSE PICKED
                 </div>
@@ -114,6 +114,11 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="end-result" class="end-result">
+        <div id="result-txt" class="result-txt bold">YOU WIN</div>
+        <div class="play-again-btn dark-text" onclick="resetGame()">PLAY AGAIN</div>
     </div>
 
   </section>
@@ -130,8 +135,7 @@
 
 
   <!-- Rules Modal-->
-  <div class="modal fade" id="ruleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
+  <div class="modal fade" id="ruleModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body">
@@ -156,10 +160,8 @@
   <!-- custom JS-->
   <script src="js/index.js"></script>
   <!-- jQuery-->
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>
