@@ -119,7 +119,13 @@ function showResult(playerChoice, compChoice, result) {
             document.querySelector("#score-number").innerText = score;
         }
         else{
-            
+            if(score < 0){
+                score = 0;
+            }
+            else{
+                score -= 1;
+            }
+            document.querySelector("#score-number").innerText = score;
         }
 
     },500);
