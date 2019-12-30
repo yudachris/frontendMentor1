@@ -24,24 +24,29 @@ h1 {
   text-align: right;
 }
 
-.margin-0{
-  margin : 0;
+.margin-0 {
+  margin: 0;
 }
 
-.padding-0{
+.padding-0 {
   padding: 0;
 }
+
+.relative-position {
+  position: relative;
+}
+
 /* FONT RELATED SETTINGS*/
 
 .bold {
   font-weight: 700;
 }
 
-.dark-text{
+.dark-text {
   color: hsl(229, 25%, 31%);
 }
 
-.score-text{
+.score-text {
   color: hsl(229, 64%, 46%);
 }
 
@@ -53,85 +58,88 @@ h1 {
   margin: 3% auto 3%;
 }
 
-.stat-dashboard h1{
-  font-size:2.2rem;
+.stat-dashboard h1 {
+  font-size: 2.2rem;
 }
 
 .scoreboard {
-  padding:12px 40px 0;
+  padding: 12px 40px 0;
   background-color: white;
   border-radius: 7.5px;
-  position:absolute;
-  right:0;
+  position: absolute;
+  right: 0;
 }
 
-.scoreboard p{
-  margin:0;
+.scoreboard p {
+  margin: 0;
 }
 
-.score-title{
-  font-size:0.7rem;
+.score-title {
+  font-size: 0.7rem;
   letter-spacing: 0.15rem;
 }
 
-.score-value{
-  font-size:3rem;
-  margin-top:-10px;
+.score-value {
+  font-size: 3rem;
+  margin-top: -10px;
   text-align: center;
 }
 
 /* Game window general styles*/
-#game-window-init, #game-window-chosen{
+#game-window-init,
+#game-window-chosen {
   position: relative;
   height: 450px;
 }
+
 /* Initial Game window styles (step-1) */
 
-#game-window-init{
+#game-window-init {
 
   /*display:none;*/
 
 }
-.triangle-bg{
-  position:absolute;
-  margin:auto;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  height:66%;
-  width:25%;
+
+.triangle-bg {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 66%;
+  width: 25%;
 }
 
-.triangle-bg img{
-  height:100%;
-  width:100%;
+.triangle-bg img {
+  height: 100%;
+  width: 100%;
 }
 
 /* Game window after choosing RPS (step-2) */
 
-#game-window-chosen{
+#game-window-chosen {
   display: none;
 }
 
-#game-window-chosen .row{
+#game-window-chosen .row {
   height: inherit;
   margin: 0;
 }
 
-#game-window-chosen .content{
+#game-window-chosen .content {
   height: 100%;
   margin: auto;
   padding: 0;
 }
 
-.choice{
+.choice {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-.choice-header{
+.choice-header {
   height: 10%;
   margin: 0;
   text-align: center;
@@ -139,12 +147,11 @@ h1 {
   letter-spacing: 0.15rem;
 }
 
-.choice-body{
+.choice-body {
   margin: 0;
 
-  height:90%;
+  height: 90%;
   position: relative;
-  border: solid 1px black;
 }
 
 /*RPS buttons related styles */
@@ -156,13 +163,14 @@ h1 {
   position: absolute;
   cursor: pointer;
 }
-.rps-circle-chosen{
+
+.rps-circle-chosen {
   height: 300px;
   width: 300px;
   border-radius: 50%;
   position: absolute;
-  top:11%;
-  left:5%;
+  top: 11%;
+  left: 5%;
 }
 
 .paper-color {
@@ -198,16 +206,19 @@ h1 {
   height: 50%;
 }
 
-.rule-btn{
-  float: right;
-  border: solid 3px hsl(217, 16%, 45%);
+.rule-btn {
+  border: solid 2px hsl(217, 16%, 45%);
   border-radius: 10px;
-  padding:5px 30px 5px;
+  padding: 5px 30px 5px;
   color: white;
   letter-spacing: 0.15rem;
   margin: 5px 3% 5px 3px;
   font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  bottom: 5%;
 }
+
 /*Modal custom classes*/
 .modal h1 {
   font-size: 1.7rem;
@@ -225,9 +236,38 @@ h1 {
   margin-top: 35px;
 }
 
-.attribution{
+.attribution {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+/* End Result window */
+
+#end-result {
+  display: none;
+}
+
+.end-result {
+  position: absolute;
+  text-align: center;
+  left: calc(100vw - 57.76%);
+  top: 45%;
+}
+
+.play-again-btn {
+  background-color: white;
+  letter-spacing: 0.13rem;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.play-again-btn:hover {
+  background-color: rgb(177, 177, 177);
+}
+
+.result-txt {
+  font-size: 3.5rem;
+  padding: 10px;
 }
