@@ -60,7 +60,9 @@
 
   <!-- START OF GAME SECTION -->
   <section id="the-game">
-    <div class="game-window">
+
+    <!-- initial game window-->
+    <div id="game-window-init">
       <!-- triangle background -->
       <div class="triangle-bg">
         <img src="images/bg-triangle.svg" alt="triangle-background">
@@ -82,6 +84,38 @@
         </div>
       </div>
     </div>
+
+    <!-- game window after choosing RPS-->
+
+    <div id="game-window-chosen">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 content">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 padding-0">
+              <div class="choice">
+                <div class="choice-header">
+                  YOU PICKED
+                </div>
+                <div id="player-choice" class="choice-body">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 padding-0">
+              <div class="choice">
+                <div class="choice-header">
+                  THE HOUSE PICKED
+                </div>
+                <div id="com-choice" class="choice-body">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
   <!-- END OF GAME SECTION -->
 
@@ -125,6 +159,11 @@
   </div>
   <!-- custom JS-->
   <script src="js/index.js"></script>
+  <!-- jQuery-->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 </body>
 
 </html>

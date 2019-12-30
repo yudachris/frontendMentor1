@@ -1,17 +1,16 @@
 
-/*!! DO NOT CHANGE !!*/
+/* button positioning */
 
 #paper{
-    top:13%;
-    right:calc(100vw - 47%);
+    top:3%;
+    right:calc(100vw - 45%);
   }
   #scissors{
-    top:13%;
-    left:calc(100vw - 47%);
+    top:3%;
+    left:calc(100vw - 45%);
   }
   #rock{
-    bottom:16%;
+    top: 56%;
     left:calc(50% - 90px);
   }
   
-  /*!! DO NOT CHANGE !!*/

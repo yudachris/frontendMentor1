@@ -31,3 +31,10 @@
     }
   
   }
+
+  @media (max-width: 768px){
+    .triangle-bg{
+      width:50%;
+    }
+    
+  }
