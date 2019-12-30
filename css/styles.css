@@ -23,6 +23,14 @@ h1 {
 .align-right {
   text-align: right;
 }
+
+.margin-0{
+  margin : 0;
+}
+
+.padding-0{
+  padding: 0;
+}
 /* FONT RELATED SETTINGS*/
 
 .bold {
@@ -72,18 +80,18 @@ h1 {
   text-align: center;
 }
 
-/* Initial Game window styles */
-.game-window {
+/* Game window general styles*/
+#game-window-init, #game-window-chosen{
   position: relative;
-  height: 72vh;
+  height: 450px;
 }
-#lower{
-  height: 8vh;
-}
-#stats{
-  height: 20vh;
-}
+/* Initial Game window styles (step-1) */
 
+#game-window-init{
+
+  /*display:none;*/
+
+}
 .triangle-bg{
   position:absolute;
   margin:auto;
@@ -91,14 +99,55 @@ h1 {
   right:0;
   bottom:0;
   left:0;
-  height:250px;
-  width:300px;
+  height:66%;
+  width:25%;
 }
 
 .triangle-bg img{
   height:100%;
   width:100%;
 }
+
+/* Game window after choosing RPS (step-2) */
+
+#game-window-chosen{
+  display: none;
+}
+
+#game-window-chosen .row{
+  height: inherit;
+  margin: 0;
+}
+
+#game-window-chosen .content{
+  height: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+.choice{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.choice-header{
+  height: 10%;
+  margin: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.15rem;
+}
+
+.choice-body{
+  margin: 0;
+
+  height:90%;
+  position: relative;
+  border: solid 1px black;
+}
+
+/*RPS buttons related styles */
 
 .rps-circle {
   height: 180px;
@@ -107,7 +156,14 @@ h1 {
   position: absolute;
   cursor: pointer;
 }
-
+.rps-circle-chosen{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top:11%;
+  left:5%;
+}
 
 .paper-color {
   background: linear-gradient(135deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
@@ -171,6 +227,7 @@ h1 {
 
 .attribution{
   position: absolute;
-  bottom:10px;
-  left:calc(100vw - 65%);
+  bottom:0;
+  width: 100%;
+  text-align: center;
 }
