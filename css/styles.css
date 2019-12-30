@@ -1,6 +1,7 @@
 body {
   background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   min-height: 100vh;
+  max-height: 100vh;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 600;
   color: white;
@@ -197,12 +198,13 @@ h1 {
 }
 
 .rule-btn{
+  float: right;
   border: solid 3px hsl(217, 16%, 45%);
   border-radius: 10px;
   padding:5px 30px 5px;
   color: white;
   letter-spacing: 0.15rem;
-  margin: 20px 5% 0 0;
+  margin: 5px 3% 5px 3px;
   font-size: 1.2rem;
 }
 /*Modal custom classes*/
