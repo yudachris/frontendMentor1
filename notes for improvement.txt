@@ -1,2 +1,0 @@
-1. since all elements on the page (except the rules and attribution section) have the same right and left margin, I should have created a container for the content
-with width of some percentage, then margin right and left to auto.
