@@ -116,7 +116,7 @@ h1 {
   width: 100%;
 }
 
-/* Game window after choosing RPS (step-2) */
+/* Game window after choosing RPS (step-2 and on) */
 
 #game-window-chosen {
   display: none;
@@ -149,7 +149,6 @@ h1 {
 
 .choice-body {
   margin: 0;
-
   height: 90%;
   position: relative;
 }

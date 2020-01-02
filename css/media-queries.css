@@ -23,11 +23,42 @@
   
   }
 
-  @media (max-width:375px) {
+  @media (max-width:420px) {
   
     .triangle-bg{
       height:150px;
       width:200px;
+    
+    }
+
+    .stat-dashboard {
+      border-radius: 5px;
+      padding: 20px;
+      margin: 7.5%;
+    }
+
+    .scoreboard {
+      height: 100%;
+      padding:5px;
+      right: 10%;
+      border-radius: 3px;
+    }
+
+    .score-title{
+      letter-spacing: 0;
+      padding: 0 15px;
+    }
+
+    .stat-dashboard h1{
+      font-size: 1.3rem;
+    }
+
+    .stat-dashboard p{
+      font-size: 0.5rem;
+    } 
+
+    .score-value p{
+      font-size: 1.7rem;
     }
   
   }

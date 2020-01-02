@@ -3,15 +3,13 @@
 
 //checking if there is any data from previous session
 var score;
-var playerScore = localStorage.getItem("storedScore");
+var playerScore = sessionStorage.getItem("storedScore");
 
 if(playerScore == null){
     score = 0;
-    alert("playerscore null");
 }
 else {
     score = Number(playerScore);
-    alert("there is playerscore");
 }
 
 document.querySelector("#score-number").innerText = score;
@@ -152,7 +150,7 @@ function showResult(playerChoice, compChoice, result) {
             $("#result-txt").text(resTxt);
             $("#end-result").fadeIn();
             document.querySelector("#score-number").innerText = score;
-            localStorage.setItem("storedScore", score);
+            sessionStorage.setItem("storedScore", score);
         });
         
     },500);
