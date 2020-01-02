@@ -261,6 +261,7 @@ h1 {
   letter-spacing: 0.13rem;
   padding: 10px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .play-again-btn:hover {

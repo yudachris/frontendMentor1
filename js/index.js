@@ -1,6 +1,18 @@
 //getting input from the player based on what button the player clicked.
 //at the same time, getting the computer choice and start the match.
-var score = 0;
+
+//checking if there is any data from previous session
+var score;
+var playerScore = localStorage.getItem("storedScore");
+
+if(playerScore == null){
+    score = 0;
+    alert("playerscore null");
+}
+else {
+    score = Number(playerScore);
+    alert("there is playerscore");
+}
 
 document.querySelector("#score-number").innerText = score;
 
@@ -140,6 +152,7 @@ function showResult(playerChoice, compChoice, result) {
             $("#result-txt").text(resTxt);
             $("#end-result").fadeIn();
             document.querySelector("#score-number").innerText = score;
+            localStorage.setItem("storedScore", score);
         });
         
     },500);
