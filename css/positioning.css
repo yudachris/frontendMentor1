@@ -14,3 +14,25 @@
     left:calc(50% - 90px);
   }
   
+
+  @media (max-width:420px){
+    #paper{
+      top:20%;
+      right:calc(100vw - 40%);
+    }
+    #scissors{
+      top:20%;
+      left:calc(100vw - 40%);
+    }
+    #rock{
+      top: 55%;
+      left:calc(57% - 90px);
+    }
+
+    .end-result {
+      position: absolute;
+      text-align: center;
+      left: calc(100vw - 81%);
+      top: 55%;
+    }
+  }

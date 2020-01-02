@@ -5,10 +5,9 @@
 var score;
 var playerScore = sessionStorage.getItem("storedScore");
 
-if(playerScore == null){
+if (playerScore == null) {
     score = 0;
-}
-else {
+} else {
     score = Number(playerScore);
 }
 
@@ -26,12 +25,14 @@ for (var i = 0; i < numberOfButtons; i++) {
         var compChoice = computerChoice();
         var result = startMatch(playerChoice, compChoice);
 
-        $("#game-window-init").fadeOut(500,function(){
-            $("#game-window-chosen").fadeIn(500, function(){
+        this.setAttribute("opacity", 0.5);
+
+        $("#game-window-init").fadeOut(500, function () {
+            $("#game-window-chosen").fadeIn(500, function () {
                 showResult(playerChoice, compChoice, result);
             });
         });
-        
+
 
     });
 
@@ -117,60 +118,79 @@ function showResult(playerChoice, compChoice, result) {
         "</div>" +
         "</div>";
 
-    setTimeout(function(){
+    setTimeout(function () {
 
         document.querySelector("#com-choice").innerHTML = "<div class='rps-circle-chosen " + cC + "-color choice-button'>" +
-        "<div class='inner-circle'>" +
-        "<img src='images/icon-" + cC + ".svg' alt='choose-" + cC + "'>" +
-        "</div>" +
-        "</div>";
+            "<div class='inner-circle'>" +
+            "<img src='images/icon-" + cC + ".svg' alt='choose-" + cC + "'>" +
+            "</div>" +
+            "</div>";
 
-        if(result == "user wins"){
+        if (result == "user wins") {
             score += 1;
-            
+
             resTxt = "YOU WIN";
-        }
-        else if(result == "com wins"){
-            if(score == 0){
+        } else if (result == "com wins") {
+            if (score == 0) {
                 score = 0;
                 resTxt = "YOU LOSE";
-            }
-            else{
+            } else {
                 score -= 1;
                 resTxt = "YOU LOSE";
             }
-        }
-        else{
+        } else {
             resTxt = "DRAW";
         }
-        $("#players").addClass("relative-position");
-        $("#coms").addClass("relative-position");
-        $("#players").animate({right:'45%'},1000);
-        $("#coms").animate({left:'45%'},1000, function(){
+
+        if ($(window).width() <= 420) {
             $("#result-txt").text(resTxt);
             $("#end-result").fadeIn();
             document.querySelector("#score-number").innerText = score;
             sessionStorage.setItem("storedScore", score);
-        });
-        
-    },500);
+        } else {
+            $("#players").addClass("relative-position");
+            $("#coms").addClass("relative-position");
+            $("#players").animate({
+                right: '45%'
+            }, 1000);
+            $("#coms").animate({
+                left: '45%'
+            }, 1000, function () {
+                $("#result-txt").text(resTxt);
+                $("#end-result").fadeIn();
+                document.querySelector("#score-number").innerText = score;
+                sessionStorage.setItem("storedScore", score);
+            });
+        }
+
+    }, 500);
 
 
 }
 
-function resetGame(){
+function resetGame() {
 
-    setTimeout(function(){
-        $("#player-choice").html("");
-        $("#com-choice").html("");
-    },250);
+    if ($(window).width() <= 420) {
+        setTimeout(function () {
+            $("#player-choice").html("");
+            $("#com-choice").html("");
+        }, 250);
+    } else {
+        setTimeout(function () {
+            $("#player-choice").html("");
+            $("#com-choice").html("");
+            $("#players").removeClass("relative-position");
+            $("#coms").removeClass("relative-position");
+            $("#players").removeAttr("style");
+            $("#coms").removeAttr("style");
+        }, 250);
+    }
 
-
-    $("#game-window-chosen").fadeOut("fast", function(){
-        $("#end-result").fadeOut(500,function(){
+    $("#game-window-chosen").fadeOut("fast", function () {
+        $("#end-result").fadeOut(500, function () {
             $("#game-window-init").fadeIn("fast");
         });
-            
-        });
-        
+
+    });
+
 }

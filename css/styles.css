@@ -1,6 +1,6 @@
 body {
   background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-  min-height: 100vh;
+  height: 100vh;
   max-height: 100vh;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 600;
@@ -86,10 +86,15 @@ h1 {
 }
 
 /* Game window general styles*/
+
+#the-game{
+  height: 60%;
+}
+
 #game-window-init,
 #game-window-chosen {
   position: relative;
-  height: 450px;
+  height: 100%;
 }
 
 /* Initial Game window styles (step-1) */
@@ -151,6 +156,15 @@ h1 {
   margin: 0;
   height: 90%;
   position: relative;
+}
+
+.choice-footer{
+  height: 10%;
+  margin: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.15rem;
+  display: none;
 }
 
 /*RPS buttons related styles */
@@ -251,8 +265,9 @@ h1 {
 .end-result {
   position: absolute;
   text-align: center;
-  left: calc(100vw - 57.76%);
+  left: calc(100vw - 59%);
   top: 45%;
+  width: 238px;
 }
 
 .play-again-btn {
