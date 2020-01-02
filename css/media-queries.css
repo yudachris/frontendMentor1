@@ -71,7 +71,7 @@
     
     /* chosen */
     #game-window-chosen{
-      padding: 15% 0;
+      padding:0;
     }
 
     .rps-circle-chosen {
@@ -87,17 +87,21 @@
     
     .choice-body {
       margin: 0;
-      height: 50%;
+      height: 40%;
 
     }
 
     .choice-footer{
-      height: 50%;
+      height: 60%;
       margin: 0;
       text-align: center;
       font-size: 0.7rem;
       letter-spacing: 0.05rem;
       display: block;
+    }
+
+    .choice-footer p{
+      padding-top: 10%;
     }
 
     /* End of game window related*/
